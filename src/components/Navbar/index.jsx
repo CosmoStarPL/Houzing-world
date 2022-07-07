@@ -3,11 +3,12 @@ import { Container, Header, Nav, Wrapper } from "./style";
 import { navbar } from "../../utils/navbar";
 import { Link, Outlet } from "react-router-dom";
 import { Button } from "../Generic";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 
 const Navbar = () => {
   const navigate = useNavigate('') 
+  const Location = useLocation('')
   const on = ()=>{
     navigate('/signin')
   }
@@ -36,7 +37,9 @@ const Navbar = () => {
               );
             })}
           </Nav>
-          <Button onClick={on} width="120px" >Login</Button>
+          {
+            Location.pathname !== '/signin' && <Button onClick={on} width="120px" >Login</Button> || <Button onClick={()=>{navigate('/signup')}} width="120px" >Sign Up</Button>
+          }
         </Wrapper>
       </Header>
       <main>

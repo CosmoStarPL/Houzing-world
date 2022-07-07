@@ -17,7 +17,7 @@ const Container = styled.div`
 
 const Wrapper = styled.div`
   max-width: 1440px;
-  padding: 48px 130px 0 130px;
+  padding: 48px 30px 0 130px;
 `;
 
 const Items = styled.div`
@@ -33,7 +33,7 @@ const Items = styled.div`
 const Icons = styled.div``;
 Icons.Pin = styled(Pin)`
   position: absolute;
-  margin-right: 50px;
+  /* margin-right: 50px;   */
 `;
 Icons.Phone = styled(Phone)`
   position: relative;

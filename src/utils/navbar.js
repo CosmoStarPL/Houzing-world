@@ -2,6 +2,7 @@ import Home from "../components/Home";
 import Prop from "../components/Prop";
 import Generic from "../pages/Generic";
 import Signin from "../pages/Signin";
+import SignUp from "../pages/SignUp";
 
 export const navbar = [
   {
@@ -44,7 +45,7 @@ export const navbar = [
     id: 5,
     title: "Sign up",
     path: "/signup",
-    element: <Generic />,
+    element: <SignUp />,
     search: "?",
     hidden: true,
     private: true,
